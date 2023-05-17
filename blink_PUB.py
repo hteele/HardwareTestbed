@@ -3,6 +3,9 @@ import RPi.GPIO as GPIO
 import time
 from time import sleep
 
+# Mosquitto Publish: mosquitto_pub -h localhost -t "TOPIC" -m "MESSAGE"
+# Mosquitto Subscribe: mosquitto_sub -h localhost -t "TOPIC"
+
 GPIO.setwarnings(False)
 
 GPIO.setmode(GPIO.BOARD)
