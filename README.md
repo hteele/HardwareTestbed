@@ -12,18 +12,31 @@ Principal Investigator: Paul T. Grogan pgrogan@stevens.edu
 
 This material is based on work supported, in whole or in part, by the U.S. Department of Defense and National Aeronautics and Space Administration Earth Science Technology Office (NASA ESTO) through the Systems Engineering Research Center (SERC) under Contract No. W15QKN-18-D-0040. SERC is a federally funded University Affiliated Research Center managed by Stevens Institute of Technology. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the United States Department of Defense.
 
-Current project team:
+## Contact
 
-PI: Paul T. Grogan pgrogan@stevens.edu
-Brian Chell
-Matthew LeVine
-Leigha Capra
-Theodore Sherman
-Alex Yucra Castaneda
-Harrison Teele
+Principal Investigator: Paul T. Grogan <pgrogan@stevens.edu>
+
+## Acknowledgements
+
+This material is based on work supported, in whole or in part, by the U.S.
+Department of Defense and National Aeronautics and Space Administration Earth
+Science Technology Office (NASA ESTO) through the Systems Engineering Research
+Center (SERC) under Contract No. W15QKN-18-D-0040. SERC is a federally funded
+University Affiliated Research Center managed by Stevens Institute of
+Technology. Any opinions, findings, and conclusions or recommendations
+expressed in this material are those of the authors and do not necessarily
+reflect the views of the United States Department of Defense.
+
+Current project team:
+ * PI: Paul T. Grogan <pgrogan@stevens.edu>
+ * Brian Chell
+ * Matthew LeVine
+ * Leigha Capra
+ * Theodore Sherman
+ * Alex Yucra Castaneda
+ * Harrison Teele
 
 Project alumni:
-
-Hayden Daly
-Matthew Brand
-Jerry Sellers
+ * Hayden Daly
+ * Matthew Brand
+ * Jerry Sellers
