@@ -4,6 +4,12 @@ This is a work-in-progress repository for the hardware implementation for the Ne
 
 Information about NOS-T can be found [here](https://nost-tools.readthedocs.io/en/latest/) or through the project's [Git repository](https://github.com/code-lab-org/nost-tools)
 
+## Roadmap
+
+The hardware aspect of NOS-T aims to incorporate the existing digital environment and incorporate various test cases along with physical sensors to determine the general effectiveness and merit of the simulation. The hardware testbed aims to follow the following structure:
+
+![Block Diagram]("C:\Users\harry\Downloads\NOS-THD_FuncDiagram.png")
+
 ## Contact
 
 Principal Investigator: Paul T. Grogan pgrogan@stevens.edu
