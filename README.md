@@ -8,7 +8,7 @@ Information about NOS-T can be found [here](https://nost-tools.readthedocs.io/en
 
 The hardware aspect of NOS-T aims to incorporate the existing digital environment and incorporate various test cases along with physical sensors to determine the general effectiveness and merit of the simulation. The hardware testbed aims to follow the following structure:
 
-![Block Diagram]("NOS-THD_FuncDiagram.png")
+![Block Diagram](NOS-THD_FuncDiagram.png)
 
 ## Contact
 
