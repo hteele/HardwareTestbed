@@ -2,35 +2,44 @@ import paho.mqtt.client as mqtt
 import RPi.GPIO as GPIO
 import time
 from time import sleep
-
-# Mosquitto Publish: mosquitto_pub -h localhost -t "TOPIC" -m "MESSAGE"
-# Mosquitto Subscribe: mosquitto_sub -h localhost -t "TOPIC"
+from dotenv import dotenv_values
+from config import PREFIX
 
 GPIO.setwarnings(False)
-
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 
-MQTT_SERVER = "192.168.1.174"
-MQTT_TPC = "satellite/sunlit/status"
+credentials = dotenv_values(".env")
+SMCE_HOST, SMCE_PORT = credentials["SMCE_HOST"], int(credentials["SMCE_PORT"])
+SMCE_USERNAME, SMCE_PASSWORD = credentials["SMCE_USERNAME"], credentials["SMCE_PASSWORD"]
 
-def on_connect(client, userdata, flags, rc):
+TPC = f"{PREFIX}/hrdwr/blinkLED"
+
+def on_connect(CLIENT, userdata, flags, rc):
     print("Connected with code " + str(rc))
-    client.subscribe(MQTT_TPC)
-    print("Connected to the following topics: " + MQTT_TPC)
+    CLIENT.subscribe(TPC)
+    print("Connected to the following topics: " + TPC)
 
-def on_message(client, userdata, msg):
+def on_message(CLIENT, userdata, msg):
     #print(msg.topic+" "+str(msg.payload))
     message = msg.payload.decode("utf-8")
-    if msg.topic == MQTT_TPC and message == "sunlit":
+    if msg.topic == TPC and message == "sunlit":
         GPIO.output(11, GPIO.HIGH)
         print("ISS is sunlit")
     else:
         GPIO.output(11, GPIO.LOW)
         print("ISS is in shadow")
-        
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
-client.connect(MQTT_SERVER, 1883)
-client.loop_forever()
+                
+# build the MQTT CLIENT
+CLIENT = mqtt.Client()
+# set CLIENT username and password
+CLIENT.username_pw_set(username=SMCE_USERNAME, password=SMCE_PASSWORD)
+# set tls certificate
+CLIENT.tls_set()
+
+CLIENT.on_connect = on_connect
+CLIENT.on_message = on_message
+
+# connect to MQTT server on port 8883
+CLIENT.connect(SMCE_HOST, SMCE_PORT)
+CLIENT.loop_forever()
