@@ -20,7 +20,7 @@ TPC = f"{PREFIX}/hrdwr/blinkLED"
 
 # load selected satellite from Skyfield and print ID
 sat_url = 'http://celestrak.org/NORAD/elements/stations.txt'
-satellites = load.tle_file(sat_url)
+satellites = load.tle_file(sat_url, reload=True)
 by_name = {sat.name: sat for sat in satellites}
 satellite = by_name['ISS (ZARYA)']
 print(satellite)
