@@ -5,8 +5,8 @@ from umqtt.simple import MQTTClient
 
 led = Pin(16, Pin.OUT)
 
-wifi_ssid = "Ironman"
-wifi_password = "Hercules18!"
+wifi_ssid = "Stevens-IoT"
+wifi_password = "FSr474fTP3"
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
