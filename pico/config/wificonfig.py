@@ -1,10 +1,10 @@
-ssid = "Stevens-IoT"
-password = "FSr474fTP3"
+ssid = "SSID_HERE"
+password = "PASSWORD_HERE"
 PREFIX = "hawthorne"
-USERNAME = 'hteele'
-PASSWORD = 'hteele2023'
-HOST = 'testbed.mysmce.com'
-PORT = 8883
+USERNAME = 'USERNAME_HERE'
+PASSWORD = 'PASSWORD_HERE'
+HOST = 'HOST_HERE'
+PORT = PORT_HERE
 
 PICOCLIENT = "Pico_SUOMI"
 TPC1 = f"{PREFIX}/signals/strength"
