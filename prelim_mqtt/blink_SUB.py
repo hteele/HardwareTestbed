@@ -21,7 +21,6 @@ def on_connect(CLIENT, userdata, flags, rc):
     print("Connected to the following topics: " + TPC)
 
 def on_message(CLIENT, userdata, msg):
-    #print(msg.topic+" "+str(msg.payload))
     message = msg.payload.decode("utf-8")
     if msg.topic == TPC and message == "sunlit":
         GPIO.output(11, GPIO.HIGH)
